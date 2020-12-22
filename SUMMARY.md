@@ -5,5 +5,5 @@
 
 ## API REFERENCE
 
-* [Untitled](api-reference/untitled.md)
+* [Authorization Guide](api-reference/untitled.md)
 
