@@ -80,19 +80,76 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
 {% tab title="Response" %}
 ```go
 {
-    "sensitive": true,
-    "appVersion": "1.0.2",
-    "device": "Android",
-    "deviceOSVersion": "9",
-    "deviceUID": "a1ca4ea6-d344-4b9e-ab1c-df167ff98fdf",
-    "lang": "es",
-    "code": "878464",
-    "transactionDatetime": "2020-12-22 13:04:02",
-    "deviceCode": "f7b2d865-e598-4549-b8fd-2f5db3f32715",
-    "deviceType": "Smartphone",
-    "password": "jsjsks",
-    "transactionId": "0",
-    "userId": "wjsisiw"
+    "href": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=10&limit=10",
+    "items":[
+        {
+            "type": "song",
+            "library": "itunes",
+            "name": "G's Up (feat. Max B)",
+            "artwork_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+            "info": {
+                "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+                "title": "G's Up (feat. Max B)",
+                "collection": "Harlem: Diary of a Summer",
+                "artist": "Jim Jones",
+                "languages": [
+                    "EN",
+                    "ES"
+                    ],
+                "rating": 7.5,
+                "genres": [
+                    "soul", 
+                    "hip/hop"
+                    ],
+                "description": "",
+                "more_info":"",
+                "release_date": "2005-08-23",
+                "country": "US",
+                "price": 2.9,
+                "rental_price": 0.99,
+                "currency": "USD",
+                "url": "https://music.apple.com/ca/album/gs-up-feat-max-b/78548856?i=78548369&uo=4"
+            }
+        }
+        {
+            "type": "song",
+            "library": "itunes",
+            "name": "G's Up (feat. Max B)",
+            "artwork_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+            "info": {
+                "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+                "title": "G's Up (feat. Max B)",
+                "collection": "Harlem: Diary of a Summer",
+                "artist": "Jim Jones",
+                "languages": [
+                    "EN",
+                    "ES"
+                    ],
+                "rating": 7.5,
+                "genres": [
+                    "soul", 
+                    "hip/hop"
+                    ],
+                "description": "",
+                "more_info":"",
+                "release_date": "2005-08-23",
+                "country": "US",
+                "price": 2.9,
+                "rental_price": 0.99,
+                "currency": "USD",
+                "url": "https://music.apple.com/ca/album/gs-up-feat-max-b/78548856?i=78548369&uo=4"
+            }
+        },
+        ...
+    ],
+    "limit": 10,
+    "next": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=20&limit=10",
+    "offset": 10,
+    "previous": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=0&limit=10",
+    "page": 1,
+    "next_page": 2,
+    "previous_page": 0,
+    "total": 1432
 }
 ```
 {% endtab %}
