@@ -12,20 +12,111 @@ A full list of the objects returned by the endpoints of the Huygens Search API. 
 
 {% tabs %}
 {% tab title="Definition" %}
-| KEY | TYPE | RULE | VALUE |
-| :--- | :--- | :--- | :--- |
-| info | Object | Required | Useful device information |
-| info.device | String | Required | Type of device from which the request is made |
-| info.uuid | String | Required | Universally unique identifier |
-| info.os | String | Required | Device OS name |
-| info.os\_version | String | Required | Device OS version |
-| info.timezone | String | Required | Device OS time zone in [UTC Time Offsets](https://www.utctime.net/utc-time-zone-offsets) format |
-| info.language | String | Required | Application language in [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code. |
-| content | Object | Optional | Endpoint specific request object  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">KEY</th>
+      <th style="text-align:left">TYPE</th>
+      <th style="text-align:left">RULE</th>
+      <th style="text-align:left">VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">info</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">Required</td>
+      <td style="text-align:left">Useful device information</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.device</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Required</td>
+      <td style="text-align:left">
+        <p>Type of device from which the request is made.</p>
+        <p>Valid values: <code>desktop, phone, tablet</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.uuid</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Universally unique identifier</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.os</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">
+        <p>Device OS name.</p>
+        <p>Valid values: <code>android, iOS, web</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.os_version</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Device OS version in <a href="https://semver.org/">semantic</a> format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.timezone</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Device OS time zone in <a href="https://www.utctime.net/utc-time-zone-offsets">UTC Time Offsets</a> format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.lang</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">
+        <p>Application language in <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a> code.</p>
+        <p><b>Note:</b> This API only support English language</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.app_name</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Consumer application name</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">info.app_version</td>
+      <td style="text-align:left">String</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Consumer application version in <a href="https://semver.org/">semantic</a> format</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">content</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">Optional</td>
+      <td style="text-align:left">Endpoint specific request object</td>
+    </tr>
+  </tbody>
+</table>
 {% endtab %}
 
 {% tab title="Example" %}
-
+{% code title="request.json" %}
+```kotlin
+{
+    "info": {
+        "uuid": "23DAFA-ASDFF-A13434..",
+        "device": "web",
+        "os": "iOS",
+        "os_version": "1.0.0",
+        "timezone": "UTC-6",
+        "lang": "en",
+        "app_version": "1.0.0",
+        "sessionId": ""
+    },
+    "content": {
+    ...
+    }
+}
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
