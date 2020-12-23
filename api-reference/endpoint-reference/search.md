@@ -17,7 +17,7 @@ This endpoint allows you to get catalog information about albums, artists, playl
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" required=true %}
-A valid access token from the Huygens API: see the Authorization Guide for details.
+A valid access token from the Huygens API: see the **Authorization Guide** for details.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -59,7 +59,7 @@ Default: `0`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains an Item object wrapped in a `Paging` and `Response` object in JSON.  
+On success, the response body contains an Item object wrapped in a **Paging** and **Response** object in JSON.  
   
 **Example**:
 {% endapi-method-response-example-description %}
@@ -160,7 +160,7 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 The header status code is an error code.  
-The response body contains a `Response` object whit error information and error code.
+The response body contains a **Response** object whit error information and error code.
 {% endapi-method-response-example-description %}
 
 ```
