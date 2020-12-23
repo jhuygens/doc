@@ -64,12 +64,39 @@ Default: `0`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+On success, the response body contains a `Search Response` object in JSON format.  
+  
+**Example**:
 {% endapi-method-response-example-description %}
 
+{% tabs %}
+{% tab title="Request" %}
+```php
+curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20Floyd&type=artist,song&limit=3' \
+--header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA=='
 ```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
+{% endtab %}
+
+{% tab title="Response" %}
+```go
+{
+    "sensitive": true,
+    "appVersion": "1.0.2",
+    "device": "Android",
+    "deviceOSVersion": "9",
+    "deviceUID": "a1ca4ea6-d344-4b9e-ab1c-df167ff98fdf",
+    "lang": "es",
+    "code": "878464",
+    "transactionDatetime": "2020-12-22 13:04:02",
+    "deviceCode": "f7b2d865-e598-4549-b8fd-2f5db3f32715",
+    "deviceType": "Smartphone",
+    "password": "jsjsks",
+    "transactionId": "0",
+    "userId": "wjsisiw"
+}
 ```
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
