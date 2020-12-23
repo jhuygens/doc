@@ -191,8 +191,6 @@ The response body contains a **Response** object whit error information and erro
 
 For example: `q=roadhouse%20NOT%20blues` returns items that match “roadhouse” but excludes those that also contain the keyword “blues”. 
 
-Similarly, the **`OR`** operator can be used to broaden the search: `q=roadhouse%20OR%20blues` returns all the results that include either of the terms. Only one OR operator can be used in a query. 
-
 _Note_: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched.
 
 **Field filters**: By default, results are returned when a match is found in _any_ field of the target object type. Searches can be made more specific by specifying a `name, artist, album, genre, year and` [`country`](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) field filter. 
