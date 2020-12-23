@@ -181,6 +181,30 @@ The response body contains a **Response** object whit error information and erro
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Writing a Query - Guidelines
+
+**Encode spaces** with the hex code `%20` or `+`. 
+
+**Keyword matching**: Matching of search keywords is _not_ case-sensitive. Operators, however, should be specified in uppercase. Unless surrounded by double quotation marks, keywords are matched in any order. For example: `q=roadhouse&20blues` matches both “Blues Roadhouse” and “Roadhouse of the Blues”. `q="roadhouse&20blues"` matches “My Roadhouse Blues” but not “Roadhouse of the Blues”.
+
+**Operator**: The operator **`NOT`** can be used to exclude results. 
+
+For example: `q=roadhouse%20NOT%20blues` returns items that match “roadhouse” but excludes those that also contain the keyword “blues”. 
+
+Similarly, the **`OR`** operator can be used to broaden the search: `q=roadhouse%20OR%20blues` returns all the results that include either of the terms. Only one OR operator can be used in a query. 
+
+_Note_: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched.
+
+**Field filters**: By default, results are returned when a match is found in _any_ field of the target object type. Searches can be made more specific by specifying a `name, artist, album, genre, year and` [`country`](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) field filter. 
+
+For example: The query `q=album:gold%20artist:abba&type=album` returns only albums with the text “gold” in the album name and the text “abba” in the artist name. 
+
+To limit the results to a particular `year`, use the field filter year with album, artist, and track searches. 
+
+For example: `q=bob%20year:2014` 
+
+Or with a date range. For example: `q=bob%20year:1980-2020`
+
 ### Item Search Object
 
 {% tabs %}
