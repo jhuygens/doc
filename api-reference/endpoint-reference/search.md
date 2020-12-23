@@ -53,11 +53,6 @@ For example, if the limit value is 3 and the library is `itunes,tvmaze`, the res
 The index of the first result to return.  
 Default: `0`  
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="page" type="integer" %}
-Index page.  
-Default: `0`
-{% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
