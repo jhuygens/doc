@@ -181,8 +181,35 @@ The offset-based paging object is a container for a set of objects. It contains 
 | total | Integer | **`Required`** | The maximum number of items available to return. |
 {% endtab %}
 
-{% tab title="Second Tab" %}
-
+{% tab title="Example" %}
+```http
+{
+    "href: "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=10&limit=10",
+    "items": [
+        ...
+        ],
+    "limit": 10,
+    "next": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=20&limit=10",
+    "offset": 10,
+    "previous": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=0&limit=10",
+    "total": 1432
+}
+```
 {% endtab %}
 {% endtabs %}
+
+## Apendice
+
+### Responses definition
+
+| Type | Description |
+| :--- | :--- |
+| `succes` | Successfully completed process |
+| `error` | Error completed process |
+| `warning` | Warning or danger for consumer |
+| `informative` | Informative message for consumer |
+
+### HTTP Status Codes
+
+For more information see [this](https://tools.ietf.org/html/rfc7231) RFC paper.
 
