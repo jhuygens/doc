@@ -23,36 +23,40 @@ A valid access token from the Huygens API: see the Authorization Guide for detai
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="q" required=true type="string" %}
-Search query keywords and optional field filters.Valid field filters are: `name, year, country,`   
-For example:  
-`q=Pinck%20Floyd`
+Search query keywords and optional field filters.Valid field filters are: `name, year and country`   
+For example: `q=name:Pinck%20Floyd`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="type" type="string" required=true %}
 A comma-separated list of item types to search across.  
-Valid types are: `album , artist, playlist, track, show, movie, people and episode`  
+Valid types are: `album , artist, playlist, track, show, movie, podcast, people and episode`  
 Search results include hits from all the specified item types.  
 For example: `q=name:nirvana&type=album,track` returns both albums and tracks with **`nirvana`** included in their name.
 {% endapi-method-parameter %}
 
-{% api-method-parameter %}
-
+{% api-method-parameter name="library" type="string" %}
+Services where the API will obtain the information.  
+Valid: `itunes, tvmaze and crcind`  
+Default: `all`
 {% endapi-method-parameter %}
 
-{% api-method-parameter %}
-
+{% api-method-parameter name="limit" type="integer" %}
+Maximum number of results to return.  
+Default: `20`  
+Minimun: `1`  
+Maximun: `50`  
+Note: The limit is applied within each library, not on the total response.  
+For example, if the limit value is 3 and the library is `itunes,tvmaze`, the response contains 3 from `itunes` and 3 from `tvmaze`.
 {% endapi-method-parameter %}
 
-{% api-method-parameter %}
-
+{% api-method-parameter name="offset" type="integer" %}
+The index of the first result to return.  
+Default: `0`  
 {% endapi-method-parameter %}
 
-{% api-method-parameter %}
-
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
+{% api-method-parameter name="page" type="integer" %}
+Index page.  
+Default: `0`
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
