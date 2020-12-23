@@ -184,7 +184,7 @@ The response body contains a **Response** object whit error information and erro
 ### Item Search Object
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
 | type | String |  |  |
@@ -192,6 +192,20 @@ The response body contains a **Response** object whit error information and erro
 | name | String |  |  |
 | artwork | String |  |  |
 | info | Object |  |  |
+| info.preview\_url | String |  |  |
+| info.title | String |  |  |
+| info.collection | String |  |  |
+| info.artist | String |  |  |
+| info.languages | Array\(String\) |  |  |
+| info.rating\_avg | Float |  |  |
+| info.genres | Array\(String\) |  |  |
+| info.description | String |  |  |
+| info.more\_info | String |  |  |
+| info.release\_date | String |  |  |
+| info.country | String |  |  |
+| info.price | Float |  |  |
+| info.currency | String |  |  |
+| info.url | String |  |  |
 {% endtab %}
 
 {% tab title="Example" %}
@@ -210,7 +224,7 @@ The response body contains a **Response** object whit error information and erro
             "es",
             "en"
             ],
-        "rating": 7.5,
+        "rating_avg": 7.5,
         "genres": [
             "soul", 
             "hip/hop"
