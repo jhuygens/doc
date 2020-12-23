@@ -187,25 +187,25 @@ The response body contains a **Response** object whit error information and erro
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| type | String |  |  |
-| library | String |  |  |
-| name | String |  |  |
-| artwork | String |  |  |
-| info | Object |  |  |
-| info.preview\_url | String |  |  |
-| info.title | String |  |  |
-| info.collection | String |  |  |
-| info.artist | String |  |  |
-| info.languages | Array\(String\) |  |  |
-| info.rating\_avg | Float |  |  |
-| info.genres | Array\(String\) |  |  |
-| info.description | String |  |  |
-| info.more\_info | String |  |  |
-| info.release\_date | String |  |  |
-| info.country | String |  |  |
-| info.price | Float |  |  |
-| info.currency | String |  |  |
-| info.url | String |  |  |
+| type | `String` | **`Required`** |  |
+| library | `String` | **`Required`** |  |
+| name | `String` | **`Required`** |  |
+| artwork | `String` | **`Required`** |  |
+| info | `Object` | **`Required`** |  |
+| info.preview\_url | `String` | `Optional` |  |
+| info.title | `String` | `Optional` |  |
+| info.collection | `String` | `Optional` |  |
+| info.artist | `String` | `Optional` |  |
+| info.languages | `Array(String)` | `Optional` |  |
+| info.rating\_avg | `Float` | `Optional` |  |
+| info.genres | `Array(String)` | `Optional` |  |
+| info.description | `String` | `Optional` |  |
+| info.more\_info | `String` | `Optional` |  |
+| info.release\_date | `String` | `Optional` |  |
+| info.country | `String` | `Optional` |  |
+| info.price | `Float` | `Optional` |  |
+| info.currency | `String` | `Optional` |  |
+| info.url | `String` | `Optional` |  |
 {% endtab %}
 
 {% tab title="Example" %}

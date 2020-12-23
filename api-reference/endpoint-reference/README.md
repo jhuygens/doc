@@ -26,14 +26,16 @@ This object is a standard required container of the information requested in all
   <tbody>
     <tr>
       <td style="text-align:left">info</td>
-      <td style="text-align:left">Object</td>
+      <td style="text-align:left"><code>Object</code>
+      </td>
       <td style="text-align:left"><b><code>Required</code></b>
       </td>
       <td style="text-align:left">Useful device information</td>
     </tr>
     <tr>
       <td style="text-align:left">info.device</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><b><code>Required</code></b>
       </td>
       <td style="text-align:left">
@@ -44,14 +46,16 @@ This object is a standard required container of the information requested in all
     </tr>
     <tr>
       <td style="text-align:left">info.uuid</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Universally unique identifier</td>
     </tr>
     <tr>
       <td style="text-align:left">info.os</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">
@@ -62,21 +66,24 @@ This object is a standard required container of the information requested in all
     </tr>
     <tr>
       <td style="text-align:left">info.os_version</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Device OS version in <a href="https://semver.org/">semantic</a> format</td>
     </tr>
     <tr>
       <td style="text-align:left">info.timezone</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Device OS time zone in <a href="https://www.utctime.net/utc-time-zone-offsets">UTC Time Offsets</a> format</td>
     </tr>
     <tr>
       <td style="text-align:left">info.lang</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">
@@ -86,21 +93,24 @@ This object is a standard required container of the information requested in all
     </tr>
     <tr>
       <td style="text-align:left">info.app_name</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Consumer application name</td>
     </tr>
     <tr>
       <td style="text-align:left">info.app_version</td>
-      <td style="text-align:left">String</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Consumer application version in <a href="https://semver.org/">semantic</a> format</td>
     </tr>
     <tr>
       <td style="text-align:left">content</td>
-      <td style="text-align:left">Object</td>
+      <td style="text-align:left"><code>Object</code>
+      </td>
       <td style="text-align:left"><code>Optional</code>
       </td>
       <td style="text-align:left">Endpoint specific <code>request object </code>
@@ -139,12 +149,12 @@ This object is a standard container of the information response in all API servi
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| info | Object | **`Required`** | Useful device information |
-| info.type | String | **`Required`** | Response type identifier.  See responses definition table |
-| info.title | String | `Optional` | Response message title |
-| info.message | String | `Optional` | Response message description |
-| info.code | String | `Optional` | Response code |
-| content | Object | `Optional` | Endpoint specific `response object`  |
+| info | `Object` | **`Required`** | Useful device information |
+| info.type | `String` | **`Required`** | Response type identifier.  See responses definition table |
+| info.title | `String` | `Optional` | Response message title |
+| info.message | `String` | `Optional` | Response message description |
+| info.code | `String` | `Optional` | Response code |
+| content | `Object` | `Optional` | Endpoint specific `response object`  |
 {% endtab %}
 
 {% tab title="Example" %}
@@ -172,13 +182,13 @@ The offset-based paging object is a container for a set of objects. It contains 
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| href | String | **`Required`** | A link to the API endpoint returning the full result of the request. |
-| items | Array\(Object\) | **`Required`** | The requested data. |
-| limit | Integer | **`Required`** | The maximum number of items in the response \(as set in the query or by default\). |
-| next | String | **`Required`** | URL to the next page of items. \( `null` if none\) |
-| offset | Integer | **`Required`** | The offset of the items returned \(as set in the query or by default\). |
-| previous | String | **`Required`** | URL to the previous page of items. \( `null` if none\) |
-| total | Integer | **`Required`** | The maximum number of items available to return. |
+| href | `String` | **`Required`** | A link to the API endpoint returning the full result of the request. |
+| items | `Array(Object)` | **`Required`** | The requested data. |
+| limit | `Integer` | **`Required`** | The maximum number of items in the response \(as set in the query or by default\). |
+| next | `String` | **`Required`** | URL to the next page of items. \( `null` if none\) |
+| offset | `Integer` | **`Required`** | The offset of the items returned \(as set in the query or by default\). |
+| previous | `String` | **`Required`** | URL to the previous page of items. \( `null` if none\) |
+| total | `Integer` | **`Required`** | The maximum number of items available to return. |
 {% endtab %}
 
 {% tab title="Example" %}
