@@ -59,7 +59,7 @@ Default: `0`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains an Item object wrapped in a **Paging** and **Response** object in JSON.  
+On success, the response body contains an **Item Search** object wrapped in a **Paging** and **Response** object in JSON.  
   
 **Example**:
 {% endapi-method-response-example-description %}
@@ -88,7 +88,7 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
                 "type": "song",
                 "library": "itunes",
                 "name": "G's Up (feat. Max B)",
-                "artwork_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+                "artwork": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
                 "info": {
                     "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
                     "title": "G's Up (feat. Max B)",
@@ -117,7 +117,7 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
                 "type": "song",
                 "library": "itunes",
                 "name": "G's Up (feat. Max B)",
-                "artwork_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+                "artwork": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
                 "info": {
                     "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
                     "title": "G's Up (feat. Max B)",
@@ -160,7 +160,9 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 The header status code is an error code.  
-The response body contains a **Response** object whit error information and error code.
+The response body contains a **Response** object whit error information and error code.  
+  
+**Example**:
 {% endapi-method-response-example-description %}
 
 ```
@@ -179,5 +181,51 @@ The response body contains a **Response** object whit error information and erro
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Item Search Object
 
+{% tabs %}
+{% tab title="First Tab" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| type | String |  |  |
+| library | String |  |  |
+| name | String |  |  |
+| artwork | String |  |  |
+| info | Object |  |  |
+{% endtab %}
+
+{% tab title="Example" %}
+```text
+{
+    "type": "song",
+    "library": "itunes",
+    "name": "G's Up (feat. Max B)",
+    "artwork": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+    "info": {
+        "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/Music/v4/ff/65/2f/ff652f2b-c347-ef2f-7e86-3c0c32f11dcd/mzaf_5935542688038353189.plus.aac.p.m4a",
+        "title": "G's Up (feat. Max B)",
+        "collection": "Harlem: Diary of a Summer",
+        "artist": "Jim Jones",
+        "languages": [
+            "es",
+            "en"
+            ],
+        "rating": 7.5,
+        "genres": [
+            "soul", 
+            "hip/hop"
+            ],
+        "description": "",
+        "more_info":"",
+        "release_date": "2005-08-23",
+        "country": "US",
+        "price": 2.9,
+        "rental_price": 0.99,
+        "currency": "USD",
+        "url": "https://music.apple.com/ca/album/gs-up-feat-max-b/78548856?i=78548369&uo=4"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 
