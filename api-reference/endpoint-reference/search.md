@@ -4,32 +4,51 @@ description: Search service
 
 # Search
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method method="get" host="https://api.huygens.com" path="/v1/search" %}
 {% api-method-summary %}
-Get Cakes
+Search
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+This endpoint allows you to get catalog information about albums, artists, playlists, tracks, shows, movies, peoples or episodes that match a keyword string.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
+{% api-method-parameter name="Authorization" required=true %}
+A valid access token from the Huygens API: see the Authorization Guide for details.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
+{% api-method-parameter name="q" required=true type="string" %}
+Search query keywords and optional field filters.Valid field filters are: `name, year, country,`   
+For example:  
+`q=Pinck%20Floyd`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="type" type="string" required=true %}
+A comma-separated list of item types to search across.  
+Valid types are: `album , artist, playlist, track, show, movie, people and episode`  
+Search results include hits from all the specified item types.  
+For example: `q=name:nirvana&type=album,track` returns both albums and tracks with **`nirvana`** included in their name.
+{% endapi-method-parameter %}
+
+{% api-method-parameter %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter %}
+
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="gluten" type="boolean" %}
