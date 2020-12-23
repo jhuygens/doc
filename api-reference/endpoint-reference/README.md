@@ -98,8 +98,8 @@ A full list of the objects returned by the endpoints of the Huygens Search API. 
 {% endtab %}
 
 {% tab title="Example" %}
-{% code title="request.json" %}
-```kotlin
+{% code title="json" %}
+```http
 {
     "info": {
         "uuid": "23DAFA-ASDFF-A13434..",
@@ -109,10 +109,10 @@ A full list of the objects returned by the endpoints of the Huygens Search API. 
         "timezone": "UTC-6",
         "lang": "en",
         "app_version": "1.0.0",
-        "sessionId": ""
+        "app_name": "Example App"
     },
     "content": {
-    ...
+        ...
     }
 }
 ```
