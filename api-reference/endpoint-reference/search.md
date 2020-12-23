@@ -187,25 +187,26 @@ The response body contains a **Response** object whit error information and erro
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| type | `String` | **`Required`** |  |
-| library | `String` | **`Required`** |  |
-| name | `String` | **`Required`** |  |
-| artwork | `String` | **`Required`** |  |
-| info | `Object` | **`Required`** |  |
-| info.preview\_url | `String` | `Optional` |  |
-| info.title | `String` | `Optional` |  |
-| info.collection | `String` | `Optional` |  |
-| info.artist | `String` | `Optional` |  |
-| info.languages | `Array(String)` | `Optional` |  |
-| info.rating\_avg | `Float` | `Optional` |  |
-| info.genres | `Array(String)` | `Optional` |  |
-| info.description | `String` | `Optional` |  |
-| info.more\_info | `String` | `Optional` |  |
-| info.release\_date | `String` | `Optional` |  |
-| info.country | `String` | `Optional` |  |
-| info.price | `Float` | `Optional` |  |
-| info.currency | `String` | `Optional` |  |
-| info.url | `String` | `Optional` |  |
+| type | `String` | **`Required`** | Multimedia resource type |
+| library | `String` | **`Required`** | Origin of the multimedia resource |
+| name | `String` | **`Required`** | Multimedia resource name |
+| artwork | `String` | **`Required`** | Multimedia resource artwork  |
+| info | `Object` | **`Required`** | Multimedia resource information |
+| info.preview\_url | `String` | `Optional` | Preview multimedia resource |
+| info.title | `String` | `Optional` | Song, movie, cast... title |
+| info.collection | `String` | `Optional` | Artwork collection |
+| info.artist | `String` | `Optional` | Artwork artist |
+| info.languages | `Array(String)` | `Optional` | Available languages |
+| info.rating\_avg | `Float` | `Optional` | Rating average |
+| info.genres | `Array(String)` | `Optional` | Artwork genres |
+| info.description | `String` | `Optional` | Description |
+| info.more\_info | `String` | `Optional` | Additional artwork information |
+| info.release\_date | `String` | `Optional` | Release date to the public |
+| info.country | `String` | `Optional` | Country of origin |
+| info.price | `Float` | `Optional` | Price of the artwork |
+| info.rental\_price | `Float` | `Optional` | Rental price of the artwork |
+| info.currency | `String` | `Optional` | Currency |
+| info.url | `String` | `Optional` | Artwork URL |
 {% endtab %}
 
 {% tab title="Example" %}
