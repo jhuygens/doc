@@ -2,7 +2,7 @@
 
 {% api-method method="post" host="https://api.huygens.com" path="/v1/token" %}
 {% api-method-summary %}
-Get Cakes
+Generate Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
