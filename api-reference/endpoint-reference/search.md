@@ -23,7 +23,7 @@ A valid access token from the Huygens API: see the Authorization Guide for detai
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="q" required=true type="string" %}
-Search query keywords and optional field filters.Valid field filters are: `name, year and country`   
+Search query keywords and optional field filters and operators. Valid field filters are: `name, year and country`   
 For example: `q=name:Pinck%20Floyd`
 {% endapi-method-parameter %}
 
