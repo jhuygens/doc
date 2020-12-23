@@ -218,13 +218,13 @@ Or with a date range. For example: `q=bob%20year:1980-2020`
 | info.title | `String` | `Optional` | Song, movie, cast... title |
 | info.collection | `String` | `Optional` | Artwork collection |
 | info.artist | `String` | `Optional` | Artwork artist |
-| info.languages | `Array(String)` | `Optional` | Available languages |
+| info.languages | `Array(String)` | `Optional` | Available languages in [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code. |
 | info.rating\_avg | `Float` | `Optional` | Rating average |
 | info.genres | `Array(String)` | `Optional` | Artwork genres |
 | info.description | `String` | `Optional` | Description |
 | info.more\_info | `String` | `Optional` | Additional artwork information |
 | info.release\_date | `String` | `Optional` | Release date to the public |
-| info.country | `String` | `Optional` | Country of origin |
+| info.country | `String` | `Optional` | Country of origin.  See [country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | info.price | `Float` | `Optional` | Price of the artwork |
 | info.rental\_price | `Float` | `Optional` | Rental price of the artwork |
 | info.currency | `String` | `Optional` | Currency |
