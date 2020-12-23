@@ -6,7 +6,7 @@ description: The endpoints are arranged in a structure defined by an object mode
 
 ## Object Model
 
-A full list of the objects returned by the endpoints of the Huygens Search API. All API endpoints return data in [JSON format](https://www.json.org/json-en.html) and wrapped in a standard [Request](./#request-object) and [Response](./#response-object) object. When a collection of objects is returned and the number of objects is variable, the collection is wrapped in a ****[Pag](./#paging-object)i[ng Object](./#paging-object)  to simplify retrieval of further objects. 
+A full list of the objects returned by the endpoints of the Huygens Search API. All API endpoints return data in [JSON format](https://www.json.org/json-en.html) and wrapped in a standard [Request](./#request-object) and [Response](./#response-object) object. When a collection of objects is returned and the number of objects is variable, the collection is wrapped in a ****[Pag](./#paging-object)i[ng Object](./#paging-object)  to simplify retrieval of further objects. This API is based on [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) architectural.
 
 ## Request Object
 
@@ -211,5 +211,5 @@ The offset-based paging object is a container for a set of objects. It contains 
 
 ### HTTP Status Codes
 
-For more information see [this](https://tools.ietf.org/html/rfc7231) RFC paper.
+For more information see the [HTTP RFC](https://tools.ietf.org/html/rfc7231) paper.
 
