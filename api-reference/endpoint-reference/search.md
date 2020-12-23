@@ -64,7 +64,7 @@ Default: `0`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains an Item object wrapped in a paging object in JSON.  
+On success, the response body contains an Item object wrapped in a `Paging` and `Response` object in JSON.  
   
 **Example**:
 {% endapi-method-response-example-description %}
@@ -78,7 +78,7 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
 {% endtab %}
 
 {% tab title="Response" %}
-```go
+```http
 {
     "info": {
         "type": "success",
@@ -160,6 +160,25 @@ curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20F
 ```
 {% endtab %}
 {% endtabs %}
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+The header status code is an error code.  
+The response body contains a `Response` object whit error information and error code.
+{% endapi-method-response-example-description %}
+
+```
+{
+    "info": {
+        "type": "error",
+        "title": "Error in procces",
+        "message": "Error message",
+        "code": "1"
+    }
+    "content": nil
+}
+```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
