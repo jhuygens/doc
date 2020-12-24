@@ -58,9 +58,10 @@ Could not find a cake matching this query.
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| grant\_type | `String` | **`Required`** | As defined in the OAuth 2.0 specification, this field must contain the value `"authorization_code"`. |
-| code | `String` | **`Required`** | The authorization code returned from the request to the Sing Up endpoint: `/v1/singup` |
-| username | `String` | **`Required`** | Registered username. |
+| grant\_type | `String` | **`Required`** | As defined in the OAuth 2.0 specification, this field must contain the value `"authorization_code" or "refresh_token"` |
+| code | `String` | `Optional` | The authorization code returned from the request to the Sing Up endpoint: `/v1/singup` |
+| username | `String` | `Optional` | Registered username. |
+| refresh\_token | `String` | `Optional` | The refresh token returned from the authorization code exchange. |
 {% endtab %}
 
 {% tab title="JSON" %}
@@ -68,7 +69,8 @@ Could not find a cake matching this query.
 {
     "garant_type": "authorization_code",
     "code": "24HLJ123",
-    "username" "example"
+    "username": "example",
+    "refresh_token": "NgAagA...NUm_SHo"
 }
 ```
 {% endtab %}
