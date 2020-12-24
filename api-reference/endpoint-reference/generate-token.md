@@ -19,7 +19,7 @@ Value: `application/json`
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="--data-raw" type="object" required=true %}
-**Generate Token** object wrapped in **Request** JSON object
+**Generate Token Request** object wrapped in **Request** JSON object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -48,5 +48,25 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Generate Token Request Object
 
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| user\_code | `String` | **`Required`** | User code generate in **Sing Up** service |
+| email | `String` | **`Required`** | User email |
+| password | `String` | **`Required`** | Valid user password  |
+{% endtab %}
+
+{% tab title="JSON" %}
+```text
+{
+    "user_code": "24HLJ123",
+    "email": "example@huygens.com",
+    "password" "HelloW0rld"
+}
+```
+{% endtab %}
+{% endtabs %}
 
