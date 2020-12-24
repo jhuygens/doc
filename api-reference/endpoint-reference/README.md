@@ -120,7 +120,7 @@ This object is a standard required container of the information requested in all
 </table>
 {% endtab %}
 
-{% tab title="Example" %}
+{% tab title="JSON" %}
 ```http
 {
     "info": {
@@ -157,7 +157,7 @@ This object is a standard container of the information response in all API servi
 | content | `Object` | `Optional` | Endpoint specific `response object`  |
 {% endtab %}
 
-{% tab title="Example" %}
+{% tab title="JSON" %}
 ```text
 {
     "info": {
