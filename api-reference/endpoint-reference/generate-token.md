@@ -23,7 +23,7 @@ Value: `application/json`
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="--data-raw" type="object" required=true %}
-**Generate Token Request** object wrapped in **Request** JSON object
+**Access Token Request** object wrapped in **Request** JSON object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -52,7 +52,7 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Generate Token Request Object
+### Access Token Request Object
 
 {% tabs %}
 {% tab title="Definition" %}
@@ -74,7 +74,85 @@ Could not find a cake matching this query.
 {% endtab %}
 {% endtabs %}
 
-### Token
+### Access Token Response Object
+
+{% tabs %}
+{% tab title="Definition" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">KEY</th>
+      <th style="text-align:left">TYPE</th>
+      <th style="text-align:left">RULE</th>
+      <th style="text-align:left">VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">access_token</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">An access token that can be provided in subsequent calls to API services.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">token_type</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">How the access token may be used: always &#x201C;Bearer&#x201D;.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">scope</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">
+        <p>A space-separated list of scopes which have been granted for this <code>access_token</code>
+        </p>
+        <p>Example: <code>user-search-resources</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">expires_in</td>
+      <td style="text-align:left"><code>Integer</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">The time period (in seconds) for which the access token is valid.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">refresh_token</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">A token that can be sent to the Spotify Accounts service in place of an
+        authorization code. (When the access code expires, send a POST request
+        to the Accounts service <code>/v1/token</code> endpoint, but use this code
+        in place of an authorization code. A new access token will be returned.
+        A new refresh token might be returned too.)</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="JSON" %}
+```text
+{
+   "access_token": "NgCXRK...MzYjw",
+   "token_type": "Bearer",
+   "scope": "user-search-resources",
+   "expires_in": 3600,
+   "refresh_token": "NgAagA...Um_SHo"
+}
+```
+{% endtab %}
+{% endtabs %}
 
 Is a `JSON string` param, this is an encode Token based in [Bearer Authentication](https://tools.ietf.org/html/rfc6750).
 
