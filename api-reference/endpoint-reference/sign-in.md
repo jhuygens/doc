@@ -27,7 +27,9 @@ Value: `application/json`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains a **User Code** wrapped in **Response** object in JSON. This user code is required to Generate Token.
+On success, the response body contains a **User Code** wrapped in **Response** object in JSON. This user code is required to Generate Token.  
+  
+**Example:**
 {% endapi-method-response-example-description %}
 
 {% tabs %}
@@ -76,7 +78,9 @@ curl --location --request GET 'https://api.cakes.com/v1/singup' \
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
 The header status code is an error code.  
-The response body contains a **Response** object whit error information and error code.
+The response body contains a **Response** object whit error information and error code.  
+  
+**Example:**
 {% endapi-method-response-example-description %}
 
 ```

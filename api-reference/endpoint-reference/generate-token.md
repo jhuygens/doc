@@ -31,13 +31,18 @@ Value: `application/json`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+On success, the response body contains an **Access Token Response** object wrapped in Response object in JSON.   
+  
+**Example:**
 {% endapi-method-response-example-description %}
 
 {% tabs %}
 {% tab title="Request" %}
-```
-{
+```bash
+curl --location --request GET 'https://api.huygens.com/v1/token' \
+--header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
+--header 'Content-Type: application/json' \
+--data-raw '{
     "info": {
         "uuid": "23DAFA-ASDFF-A13434..",
         "device": "web",
@@ -56,25 +61,52 @@ Cake successfully retrieved.
             "refresh_token": "NgAagA...NUm_SHo"
         }
     }
-}
+}'
 ```
 {% endtab %}
 
 {% tab title="Response" %}
 ```
-
+{
+    "info": {
+        "type": "success",
+        "title": "Succefull response",
+        "message": "",
+        "code": "0"
+    },
+    "content": {
+        {
+           "access_token": "NgCXRK...MzYjw",
+           "token_type": "Bearer",
+           "scope": "user-search-resources",
+           "expires_in": 3600,
+           "refresh_token": "NgAagA...Um_SHo"
+        }
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+The header status code is an error code.  
+The response body contains a **Response** object whit error information and error code.  
+  
+**Example:**
 {% endapi-method-response-example-description %}
 
 ```
-
+{
+    "info": {
+        "type": "error",
+        "title": "Error in register",
+        "message": "User not has been register",
+        "code": "1"
+    }
+    "content": nil
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
