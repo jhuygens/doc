@@ -6,30 +6,20 @@ Generate Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+This endpoint allows you to generate a valid authentication token to made requests in API. This API use **Bearer Authentication**.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Value: `application/json`
 {% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-
-{% api-method-form-data-parameters %}
-{% api-method-parameter name="" type="object" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
+{% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="" type="object" required=true %}
-
+{% api-method-parameter name="--data-raw" type="object" required=true %}
+**Generate Token** object wrapped in **Request** JSON object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
