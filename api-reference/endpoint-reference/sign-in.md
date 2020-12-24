@@ -98,7 +98,7 @@ The response body contains a **Response** object whit error information and erro
 ### Credentials Object
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Definition" %}
 <table>
   <thead>
     <tr>
@@ -146,7 +146,7 @@ The response body contains a **Response** object whit error information and erro
 </table>
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="JSON" %}
 ```text
 {
     "email": "example@huygens.com",
