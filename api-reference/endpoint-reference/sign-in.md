@@ -1,6 +1,6 @@
 # Sign Up
 
-{% api-method method="post" host="https://api.cakes.com" path="/v1/signin" %}
+{% api-method method="post" host="https://api.cakes.com" path="/v1/signup" %}
 {% api-method-summary %}
 Sign Up
 {% endapi-method-summary %}
@@ -19,7 +19,7 @@ Value: `application/json`
 
 {% api-method-form-data-parameters %}
 {% api-method-parameter name="--data-raw" type="object" required=true %}
-Credentials object wrapped in Request object
+**Credentials** object wrapped in **Request** object
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
@@ -33,7 +33,7 @@ On success, the response body contains a **User Code** wrapped in **Response** o
 {% tabs %}
 {% tab title="Request" %}
 ```bash
-curl --location --request GET 'https://api.cakes.com/v1/singin' \
+curl --location --request GET 'https://api.cakes.com/v1/singup' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "info": {

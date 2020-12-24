@@ -191,7 +191,7 @@ The offset-based paging object is a container for a set of objects. It contains 
 | total | `Integer` | **`Required`** | The maximum number of items available to return. |
 {% endtab %}
 
-{% tab title="Example" %}
+{% tab title="JSON" %}
 ```http
 {
     "href: "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=10&limit=10",
