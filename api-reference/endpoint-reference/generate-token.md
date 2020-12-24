@@ -1,8 +1,8 @@
-# Generate Token
+# Access Token
 
 {% api-method method="post" host="https://api.huygens.com" path="/v1/token" %}
 {% api-method-summary %}
-Generate Token
+Access Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
