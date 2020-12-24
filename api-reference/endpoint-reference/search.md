@@ -59,11 +59,11 @@ Default: `0`
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 
-{% api-method-form-data-parameters %}
-{% api-method-parameter type="object" name="--data-raw" required=true %}
-**Request** object
+{% api-method-body-parameters %}
+{% api-method-parameter type="string" name="--data-raw" required=true %}
+**Request** JSON object
 {% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
