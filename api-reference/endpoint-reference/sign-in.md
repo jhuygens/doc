@@ -1,12 +1,12 @@
-# Sign In
+# Sign Up
 
 {% api-method method="post" host="https://api.cakes.com" path="/v1/signin" %}
 {% api-method-summary %}
-Sign In
+Sign Up
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+This endpoint allows sign up to Huygens Search API and send a user code to email. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -48,7 +48,7 @@ curl --location --request GET 'https://api.cakes.com/v1/singin' \
     },
     "content": {
         "email": "example@huygens.com",
-        "password": "example",
+        "password": "HelloW0rld",
         "username": "example" 
     }
 }'
@@ -97,11 +97,67 @@ The response body contains a **Response** object whit error information and erro
 
 ### Credentials Object
 
-|  |  |
-| :--- | :--- |
-|  |  |
+{% tabs %}
+{% tab title="First Tab" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">KEY</th>
+      <th style="text-align:left">TYPE</th>
+      <th style="text-align:left">RULE</th>
+      <th style="text-align:left">VALUE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">email</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">A valid email</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">password</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">
+        <p>A valid user password.
+          <br />Rules:</p>
+        <p><code>6 or more characters</code>
+        </p>
+        <p><code>Upper &amp; lowercase letter</code>
+        </p>
+        <p><code>At leas one number</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">username</td>
+      <td style="text-align:left"><code>String</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">A valid username</td>
+    </tr>
+  </tbody>
+</table>
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```text
+{
+    "email": "example@huygens.com",
+    "password": "HelloW0rld",
+    "username": "example" 
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### User Code
 
-Is a JSON string param, this user code is required to [Generate Token](generate-token.md#generate-token). To retrieve the user code use the recover user code service.
+Is a JSON string param, this user code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
 
