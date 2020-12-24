@@ -16,7 +16,11 @@ This endpoint allows you to get catalog information about albums, artists, playl
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authorization" required=true %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Value: `application/json`
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="Authorization" required=true type="string" %}
 A valid access token from the Huygens API: see the **Authorization Guide** for details.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
@@ -68,7 +72,22 @@ On success, the response body contains an **Item Search** object wrapped in a **
 {% tab title="Request" %}
 ```php
 curl --location --request GET 'https://api.huygens.com/v1/search?q=name:Pink%20Floyd&type=artist,song&limit=3' \
---header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA=='
+--header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "info": {
+        "uuid": "23DAFA-ASDFF-A13434..",
+        "device": "web",
+        "os": "iOS",
+        "os_version": "1.0.0",
+        "timezone": "UTC-6",
+        "lang": "en",
+        "app_version": "1.0.0",
+        "app_name": "Example App"
+    },
+    "content": {
+    }
+}'
 ```
 {% endtab %}
 
@@ -175,6 +194,38 @@ The response body contains a **Response** object whit error information and erro
     }
     "content": nil
 }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.cakes.com" path="/v1/signup" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Content-Type" type="string" required=true %}
+Value: `application/json`
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+Value: application/json
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
