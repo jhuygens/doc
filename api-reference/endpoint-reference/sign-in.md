@@ -35,7 +35,7 @@ On success, the response body contains a **User Code** wrapped in **Response** o
 {% tabs %}
 {% tab title="Request" %}
 ```bash
-curl --location --request GET 'https://api.cakes.com/v1/singup' \
+curl --location --request GET 'https://api.huygens.com/v1/singup' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "info": {
