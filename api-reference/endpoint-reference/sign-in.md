@@ -159,5 +159,5 @@ The response body contains a **Response** object whit error information and erro
 
 ### User Code
 
-Is a JSON string param, this user code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
+Is a `JSON string` param, this user code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
 
