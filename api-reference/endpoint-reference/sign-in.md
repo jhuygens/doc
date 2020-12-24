@@ -159,5 +159,5 @@ The response body contains a **Response** object whit error information and erro
 
 ### User Access Code
 
-The `access_code` field is a `JSON string` param, this code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
+The `access_code` field is a `JSON string` param, this code is required to [Access Token](generate-token.md#generate-token). This code is send to register user email.
 
