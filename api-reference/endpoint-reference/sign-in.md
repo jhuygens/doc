@@ -65,7 +65,7 @@ curl --location --request GET 'https://api.cakes.com/v1/singup' \
         "code": "0"
     },
     "content": {
-        "user_code": "q1L4JK2"
+        "access_code": "q1L4JK2"
     }
 }
 ```
@@ -157,7 +157,7 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 {% endtabs %}
 
-### User Code
+### User Access Code
 
-Is a `JSON string` param, this user code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
+The `access_code` field is a `JSON string` param, this code is required to [Generate Token](generate-token.md#generate-token). This code is send to register user email.
 

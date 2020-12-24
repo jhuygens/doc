@@ -12,6 +12,10 @@ This endpoint allows you to generate a valid authentication token to made reques
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
+{% api-method-parameter name="Authorization" required=true type="string" %}
+Base 64 encoded string that contains the client ID and client secret key. The field must have the format: **`Authorization: Basic *<base64 encoded email:password>*`**
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="Content-Type" type="string" required=true %}
 Value: `application/json`
 {% endapi-method-parameter %}
@@ -54,19 +58,27 @@ Could not find a cake matching this query.
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| user\_code | `String` | **`Required`** | User code generate in **Sing Up** service |
-| email | `String` | **`Required`** | User email |
-| password | `String` | **`Required`** | Valid user password  |
+| grant\_type | `String` | **`Required`** | As defined in the OAuth 2.0 specification, this field must contain the value `"authorization_code"`. |
+| code | `String` | **`Required`** | The authorization code returned from the request to the Sing Up endpoint: `/v1/singup` |
+| username | `String` | **`Required`** | Registered username. |
 {% endtab %}
 
 {% tab title="JSON" %}
 ```text
 {
-    "user_code": "24HLJ123",
-    "email": "example@huygens.com",
-    "password" "HelloW0rld"
+    "garant_type": "authorization_code",
+    "code": "24HLJ123",
+    "username" "example"
 }
 ```
 {% endtab %}
 {% endtabs %}
+
+### Token
+
+Is a `JSON string` param, this is an encode Token based in [Bearer Authentication](https://tools.ietf.org/html/rfc6750).
+
+
+
+
 

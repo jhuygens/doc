@@ -21,7 +21,7 @@ Value: `application/json`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Authorization" required=true type="string" %}
-A valid access token from the Huygens API: see the **Authorization Guide** for details.
+A valid Bearer Authentication Token from the Huygens API: see the **Authorization Guide** for details.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
