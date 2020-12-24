@@ -156,7 +156,7 @@ Could not find a cake matching this query.
 {% endtab %}
 {% endtabs %}
 
-Is a `JSON string` param, this is an encode Token based in [Bearer Authentication](https://tools.ietf.org/html/rfc6750).
+For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) and [OAuth 2.0 Bearer Token Usage ](https://tools.ietf.org/html/rfc6750)specifications.
 
 
 
