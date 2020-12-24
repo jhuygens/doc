@@ -34,9 +34,38 @@ Value: `application/json`
 Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
+{% tabs %}
+{% tab title="Request" %}
 ```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
+{
+    "info": {
+        "uuid": "23DAFA-ASDFF-A13434..",
+        "device": "web",
+        "os": "iOS",
+        "os_version": "1.0.0",
+        "timezone": "UTC-6",
+        "lang": "en",
+        "app_version": "1.0.0",
+        "app_name": "Example App"
+    },
+    "content": {
+        {
+            "garant_type": "authorization_code",
+            "code": "24HLJ123",
+            "username": "example",
+            "refresh_token": "NgAagA...NUm_SHo"
+        }
+    }
+}
 ```
+{% endtab %}
+
+{% tab title="Response" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 
 {% api-method-response-example httpCode=404 %}
@@ -45,7 +74,7 @@ Could not find a cake matching this query.
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "Ain't no cake like that."}
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
