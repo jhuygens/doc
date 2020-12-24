@@ -75,7 +75,8 @@ curl --location --request GET 'https://api.cakes.com/v1/singin' \
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+The header status code is an error code.  
+The response body contains a **Response** object whit error information and error code.
 {% endapi-method-response-example-description %}
 
 ```
@@ -94,5 +95,13 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Credentials Object
 
+|  |  |
+| :--- | :--- |
+|  |  |
+
+### User Code
+
+Is a JSON string param, this user code is required to [Generate Token](generate-token.md#generate-token). To retrieve the user code use the recover user code service.
 
