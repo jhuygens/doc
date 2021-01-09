@@ -64,10 +64,10 @@ curl --location --request POST 'https://api.huygens.com/v1/reset_secret' \
 ```
 {
     "info": {
-        "type": "error",
-        "title": "Error in procces",
-        "message": "Error message",
-        "code": "1"
+        "type": "success",
+        "title": "Succefull response",
+        "message": "",
+        "code": "0"
     }
     "content": {
         "client_id": "1d4b0fae807b4f2d876...",
