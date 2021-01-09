@@ -1,6 +1,6 @@
 # Reset Client Secret
 
-{% api-method method="post" host="https://api.cakes.com" path="/v1/reset\_secret" %}
+{% api-method method="post" host="https://api.huygens.com" path="/v1/reset\_secret" %}
 {% api-method-summary %}
 Reset Client Secret
 {% endapi-method-summary %}
