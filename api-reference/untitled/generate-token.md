@@ -1,4 +1,8 @@
-# Access Token
+---
+description: 'The request is sent to the /v1/token endpoint of the Auth service:'
+---
+
+# 1. Have your application request authorization
 
 {% api-method method="post" host="https://api.huygens.com" path="/v1/token" %}
 {% api-method-summary %}
@@ -6,14 +10,14 @@ Access Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to generate a valid authentication token to made requests in API. This API use **Bearer Authentication**.
+The body of this POST request must contain the following parameters encoded in `application/x-www-form-urlencoded` as defined in the **OAuth 2.0** specification:
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="Authorization" required=true type="string" %}
-Base 64 encoded string that contains the client ID and client secret key. The field must have the format: **`Authorization: Basic *<base64 encoded email:password>*`**
+Base 64 encoded string that contains the client ID and client secret key. The field must have the format: Authorization: `Basic <base64 encoded client_id:client_secret>`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
@@ -22,8 +26,8 @@ Value: `application/json`
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="--data-raw" type="object" required=true %}
-**Access Token Request** object wrapped in **Request** JSON object
+{% api-method-parameter name="grant\_type" type="object" required=true %}
+Set it to `client_credentials`.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -39,7 +43,7 @@ On success, the response body contains an **Access Token Response** object wrapp
 {% tabs %}
 {% tab title="Request" %}
 ```bash
-curl --location --request GET 'https://api.huygens.com/v1/token' \
+curl --location --request POST 'https://api.huygens.com/v1/token' \
 --header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -53,14 +57,7 @@ curl --location --request GET 'https://api.huygens.com/v1/token' \
         "app_version": "1.0.0",
         "app_name": "Example App"
     },
-    "content": {
-        {
-            "garant_type": "authorization_code",
-            "code": "24HLJ123",
-            "username": "example",
-            "refresh_token": "NgAagA...NUm_SHo"
-        }
-    }
+    "content": {}
 }'
 ```
 {% endtab %}
@@ -76,11 +73,9 @@ curl --location --request GET 'https://api.huygens.com/v1/token' \
     },
     "content": {
         {
-           "access_token": "NgCXRK...MzYjw",
-           "token_type": "Bearer",
-           "scope": "user-search-resources",
-           "expires_in": 3600,
-           "refresh_token": "NgAagA...Um_SHo"
+           "access_token": "NgCXRKc...MzYjw",
+           "token_type": "bearer",
+           "expires_in": 3600
         }
     }
 }

@@ -6,7 +6,7 @@
 ## API REFERENCE
 
 * [Authorization Guide](api-reference/untitled/README.md)
-  * [Access Token](api-reference/untitled/generate-token.md)
+  * [1. Have your application request authorization](api-reference/untitled/generate-token.md)
 * [Endpoint Reference](api-reference/endpoint-reference/README.md)
   * [Client Sign Up](api-reference/endpoint-reference/sign-in.md)
   * [Reset Client Secret](api-reference/endpoint-reference/reset-client-secret.md)
