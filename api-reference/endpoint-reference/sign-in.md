@@ -27,7 +27,7 @@ Value: `application/json`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains a **User Code** wrapped in **Response** object in JSON. This user code is required to Generate Token.  
+On success, the response body contains a **`client_id`** wrapped in **Response** object in JSON. This user code is required to Generate Token.  
   
 **Example:**
 {% endapi-method-response-example-description %}
@@ -67,7 +67,7 @@ curl --location --request GET 'https://api.huygens.com/v1/singup' \
         "code": "0"
     },
     "content": {
-        "access_code": "q1L4JK2"
+        "client_id": "q1L4JK2"
     }
 }
 ```
@@ -161,7 +161,7 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 {% endtabs %}
 
-### User Access Code
+### Client ID
 
-The `access_code` field is a `JSON string` param, this code is required to [Access Token](generate-token.md#generate-token). This code is send to register user email.
+The `client_id` field is a `JSON string` param, this code is required to [Access Token](generate-token.md#generate-token). This code is send to register user email.
 

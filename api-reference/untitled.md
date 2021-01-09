@@ -1,3 +1,9 @@
+---
+description: >-
+  Making authorized requests to the Huygens Search API requires that you are
+  granted permission to access data.
+---
+
 # Authorization Guide
 
 ## Getting Super Powers
