@@ -23,7 +23,7 @@ A valid Bearer Authentication Token from the Huygens API: see the **Authorizatio
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="--data-raw" type="string" required=true %}
-**Request** object
+**Reset Client Secret Request** object wrapped in a **Request** object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -34,23 +34,111 @@ A valid Bearer Authentication Token from the Huygens API: see the **Authorizatio
 Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
+{% tabs %}
+{% tab title="Request" %}
+```http
+{
+    "info": {
+        "uuid": "23DAFA-ASDFF-A13434..",
+        "device": "web",
+        "os": "iOS",
+        "os_version": "1.0.0",
+        "timezone": "UTC-6",
+        "lang": "en",
+        "app_version": "1.0.0",
+        "app_name": "Example App"
+    },
+    "content": {
+        "client_id": "1d4b0fae807b4f2d876...",
+        "secret_key": "059bdc1f26314ab395...",
+        "password": "example", 
+    }
+}
 ```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
+{% endtab %}
+
+{% tab title="Response" %}
 ```
+{
+    "info": {
+        "type": "error",
+        "title": "Error in procces",
+        "message": "Error message",
+        "code": "1"
+    }
+    "content": {
+        "client_id": "1d4b0fae807b4f2d876...",
+        "secret_key": "93g9480940986314ab..."
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
+{% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Could not find a cake matching this query.
+The header status code is an error code.  
+The response body contains a **Response** object whit error information and error code.  
 {% endapi-method-response-example-description %}
 
 ```
-{    "message": "Ain't no cake like that."}
+{
+    "info": {
+        "type": "error",
+        "title": "Error in procces",
+        "message": "Error message",
+        "code": "1"
+    }
+    "content": nil
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+### Reset Client Secret Request Object
+
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| client\_id | `String` | **`Required`** | Client register Id |
+| secret\_key | `String` | **`Required`** | Active secret key |
+| password | `String` | **`Required`** | Client password |
+{% endtab %}
+
+{% tab title="JSON Example" %}
+```text
+{
+     "client_id": "1d4b0fae807b4f2d876...",
+     "secret_key": "059bdc1f26314ab395...",
+     "password": "example", 
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Reset Client Secret Response Object
+
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| client\_id | `String` | **`Required`** | Client id |
+| secret\_key | `String` | **`Required`** | Client secret key |
+{% endtab %}
+
+{% tab title="JSON Example" %}
+```text
+{
+     "client_id": "1d4b0fae807b4f2d876...",
+     "secret_key": "93g9480940986314ab..."
+}
+```
+{% endtab %}
+{% endtabs %}
 
 
 
