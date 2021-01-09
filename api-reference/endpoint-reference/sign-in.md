@@ -71,8 +71,8 @@ curl --location --request GET 'https://api.huygens.com/v1/singup' \
         "code": "0"
     },
     "content": {
-        "client_id": "1d4b0fae807b4f2d876..."
-        "secret_key": "059bdc1f26314ab395...",
+        "client_id": "1d4b0fae807b4f2d876...",
+        "secret_key": "059bdc1f26314ab395..."
     }
 }
 ```
@@ -190,7 +190,12 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 
 {% tab title="JSON Example" %}
-
+```text
+{
+     "client_id": "1d4b0fae807b4f2d876...",
+     "secret_key": "059bdc1f26314ab395..."
+}
+```
 {% endtab %}
 {% endtabs %}
 
