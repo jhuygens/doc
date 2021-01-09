@@ -80,7 +80,6 @@ curl --location --request POST 'https://api.huygens.com/v1/token' \
         }
     }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
