@@ -1,14 +1,12 @@
 ---
-description: >-
-  Making authorized requests to the Huygens Search API requires that you are
-  granted permission to access data.
+description: To access Huygens Search features requires that you are granted permission.
 ---
 
 # Authorization Guide
 
 ## Client Credentials Flow
 
-Becoming a super hero is a fairly straight forward process:
+The Client Credentials flow is used in server-to-server authentication. This flow makes it possible to authenticate your requests to the Huygens Search API.
 
 ```
 $ give me super-powers

@@ -199,5 +199,3 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 {% endtabs %}
 
-For further information about this flow, see _Client Credentials Grant_ definition in [RFC-6749, section 4.4.](https://tools.ietf.org/html/rfc6749#section-4.4)
-
