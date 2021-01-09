@@ -6,7 +6,9 @@ description: To access Huygens Search features requires that you are granted per
 
 ## Client Credentials Flow
 
-The Client Credentials flow is used in server-to-server authentication. This flow makes it possible to authenticate your requests to the Huygens Search API.
+The Client Credentials flow is used in server-to-server authentication. 
+
+This flow makes it possible to authenticate your requests to the Huygens Search API. For further information about this flow, see _Client Credentials Grant_ definition in [RFC-6749, section 4.4.](https://tools.ietf.org/html/rfc6749#section-4.4)
 
 ```
 $ give me super-powers
