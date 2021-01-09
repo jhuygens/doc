@@ -6,7 +6,7 @@ Sign Up
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows sign up to Huygens Search API and send a user id to email. 
+This endpoint allows sign up to Huygens Search API. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
