@@ -1,8 +1,8 @@
-# Sign Up
+# Sign In
 
-{% api-method method="post" host="https://api.cakes.com" path="/v1/signup" %}
+{% api-method method="post" host="https://api.huygens.com" path="/v1/signin" %}
 {% api-method-summary %}
-Sign Up
+Sign In
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -150,7 +150,7 @@ The response body contains a **Response** object whit error information and erro
 </table>
 {% endtab %}
 
-{% tab title="JSON" %}
+{% tab title="JSON Example" %}
 ```text
 {
     "email": "example@huygens.com",
