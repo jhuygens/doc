@@ -21,7 +21,7 @@ Base 64 encoded string that contains the client ID and client secret key. The fi
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
-Value: `application/x-www-form-urlencoded`
+Value: `application/json`
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
