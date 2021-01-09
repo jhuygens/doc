@@ -37,7 +37,10 @@ On success, the response body contains a **Reset Client Secret Response** object
 {% tabs %}
 {% tab title="Request" %}
 ```http
-{
+curl --location --request POST 'https://api.huygens.com/v1/reset_secret' \
+--header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
+--header 'Content-Type: application/json' \
+--data-raw '{
     "info": {
         "uuid": "23DAFA-ASDFF-A13434..",
         "device": "web",
@@ -51,9 +54,9 @@ On success, the response body contains a **Reset Client Secret Response** object
     "content": {
         "client_id": "1d4b0fae807b4f2d876...",
         "secret_key": "059bdc1f26314ab395...",
-        "password": "example", 
+        "password": "example"
     }
-}
+}'
 ```
 {% endtab %}
 
