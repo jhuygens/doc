@@ -1,8 +1,8 @@
-# Sign In
+# Sign Up
 
 {% api-method method="post" host="https://api.huygens.com" path="/v1/signin" %}
 {% api-method-summary %}
-Sign In
+Sign Up
 {% endapi-method-summary %}
 
 {% api-method-description %}
