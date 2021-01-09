@@ -27,7 +27,7 @@ Value: `application/x-www-form-urlencoded`
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="grant\_type" type="object" required=true %}
-Set it to `client_credentials`.
+Set it to `client_credentials`
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -35,8 +35,7 @@ Set it to `client_credentials`.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains an **Access Token Response** object wrapped in Response object in JSON.   
-  
+On success, the response body contains an **Access Token Response** object.  
 **Example:**
 {% endapi-method-response-example-description %}
 
@@ -45,39 +44,17 @@ On success, the response body contains an **Access Token Response** object wrapp
 ```bash
 curl --location --request POST 'https://api.huygens.com/v1/token' \
 --header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "info": {
-        "uuid": "23DAFA-ASDFF-A13434..",
-        "device": "web",
-        "os": "iOS",
-        "os_version": "1.0.0",
-        "timezone": "UTC-6",
-        "lang": "en",
-        "app_version": "1.0.0",
-        "app_name": "Example App"
-    },
-    "content": {}
-}'
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials'
 ```
 {% endtab %}
 
 {% tab title="Response" %}
 ```
 {
-    "info": {
-        "type": "success",
-        "title": "Succefull response",
-        "message": "",
-        "code": "0"
-    },
-    "content": {
-        {
-           "access_token": "NgCXRKc...MzYjw",
-           "token_type": "bearer",
-           "expires_in": 3600
-        }
-    }
+     "access_token": "NgCXRKc...MzYjw",
+     "token_type": "bearer",
+     "expires_in": 3600
 }
 ```
 {% endtab %}
@@ -108,6 +85,30 @@ The response body contains a **Response** object whit error information and erro
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Access Token Response Object
+
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| access\_token | `String` | **`Required`** | An access token that can be provided in subsequent calls to API services. |
+| token\_type | `String` | **`Required`** | How the access token may be used: always “Bearer”. |
+| expires\_in | `Integer` | **`Required`** | The time period \(in seconds\) for which the access token is valid. |
+{% endtab %}
+
+{% tab title="JSON Example" %}
+```text
+{
+   "access_token": "NgCXRK...MzYjw",
+   "token_type": "Bearer",
+   "expires_in": 3600
+}
+```
+{% endtab %}
+{% endtabs %}
+
+For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) specifications.
+
 ### Access Token Request Object
 
 {% tabs %}
@@ -131,87 +132,6 @@ The response body contains a **Response** object whit error information and erro
 ```
 {% endtab %}
 {% endtabs %}
-
-### Access Token Response Object
-
-{% tabs %}
-{% tab title="Definition" %}
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">KEY</th>
-      <th style="text-align:left">TYPE</th>
-      <th style="text-align:left">RULE</th>
-      <th style="text-align:left">VALUE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">access_token</td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left"><b><code>Required</code></b>
-      </td>
-      <td style="text-align:left">An access token that can be provided in subsequent calls to API services.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">token_type</td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left"><b><code>Required</code></b>
-      </td>
-      <td style="text-align:left">How the access token may be used: always &#x201C;Bearer&#x201D;.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">scope</td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left"><b><code>Required</code></b>
-      </td>
-      <td style="text-align:left">
-        <p>A space-separated list of scopes which have been granted for this <code>access_token</code>
-        </p>
-        <p>Example: <code>user-search-resources</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">expires_in</td>
-      <td style="text-align:left"><code>Integer</code>
-      </td>
-      <td style="text-align:left"><b><code>Required</code></b>
-      </td>
-      <td style="text-align:left">The time period (in seconds) for which the access token is valid.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">refresh_token</td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left"><b><code>Required</code></b>
-      </td>
-      <td style="text-align:left">A token that can be sent to the Spotify Accounts service in place of an
-        authorization code. (When the access code expires, send a POST request
-        to the Accounts service <code>/v1/token</code> endpoint, but use this code
-        in place of an authorization code. A new access token will be returned.
-        A new refresh token might be returned too.)</td>
-    </tr>
-  </tbody>
-</table>
-{% endtab %}
-
-{% tab title="JSON Example" %}
-```text
-{
-   "access_token": "NgCXRK...MzYjw",
-   "token_type": "Bearer",
-   "expires_in": 3600,
-   "refresh_token": "NgAagA...Um_SHo"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) and [OAuth 2.0 Bearer Token Usage ](https://tools.ietf.org/html/rfc6750)specifications.
 
 
 
