@@ -14,5 +14,5 @@ This flow makes it possible to authenticate your requests to the Huygens Search 
 Before performing this flow you must register your application using the [Client Sing Up endpoint](../endpoint-reference/sign-in.md). This endpoint generate a client id and secret key useful in this flow.  
 {% endhint %}
 
-
+![Client Credentials Flow](../../.gitbook/assets/client-credentials-flow.png)
 
