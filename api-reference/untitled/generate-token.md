@@ -21,7 +21,7 @@ Base 64 encoded string that contains the client ID and client secret key. The fi
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="Content-Type" type="string" required=true %}
-Value: `application/json`
+Value: `application/x-www-form-urlencoded`
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -204,7 +204,6 @@ The response body contains a **Response** object whit error information and erro
 {
    "access_token": "NgCXRK...MzYjw",
    "token_type": "Bearer",
-   "scope": "user-search-resources",
    "expires_in": 3600,
    "refresh_token": "NgAagA...Um_SHo"
 }
