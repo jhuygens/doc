@@ -27,7 +27,7 @@ Value: `application/json`
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-On success, the response body contains a **`client_id`** wrapped in **Response** object in JSON. This user code is required to Generate Token.  
+On success, the response body contains a **Client Response** object wrapped in **Response** object in JSON. This user code is required to Generate Token.  
   
 **Example:**
 {% endapi-method-response-example-description %}
@@ -71,7 +71,8 @@ curl --location --request GET 'https://api.huygens.com/v1/singup' \
         "code": "0"
     },
     "content": {
-        "client_id": "q1L4JK2"
+        "client_id": "1d4b0fae807b4f2d876..."
+        "secret_key": "059bdc1f26314ab395...",
     }
 }
 ```
@@ -178,7 +179,20 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 {% endtabs %}
 
-### Client Id
+### Client Response Object
 
-The `client_id` field is a `JSON string` param, this id is required to [Access Token](generate-token.md#generate-token).
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| client\_id | `String` | **`Required`** | Client id |
+| secret\_key | `String` | **`Required`** | Client secret key |
+{% endtab %}
+
+{% tab title="JSON Example" %}
+
+{% endtab %}
+{% endtabs %}
+
+For further information about this flow, see _Client Credentials Grant_ definition in [RFC-6749, section 4.4.](https://tools.ietf.org/html/rfc6749#section-4.4)
 

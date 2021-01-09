@@ -6,7 +6,7 @@ description: >-
 
 # Authorization Guide
 
-## Getting Super Powers
+## Client Credentials Flow
 
 Becoming a super hero is a fairly straight forward process:
 
