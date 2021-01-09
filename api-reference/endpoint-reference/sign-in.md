@@ -6,7 +6,7 @@ Client Sign Up
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows sign up to Huygens Search API. 
+This endpoint allows client sign up to Huygens Search API. 
 {% endapi-method-description %}
 
 {% api-method-spec %}

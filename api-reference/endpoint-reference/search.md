@@ -61,7 +61,7 @@ Default: `0`
 
 {% api-method-body-parameters %}
 {% api-method-parameter type="string" name="--data-raw" required=true %}
-**Request** JSON object
+**Request** object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
