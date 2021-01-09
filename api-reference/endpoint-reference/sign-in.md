@@ -163,5 +163,5 @@ The response body contains a **Response** object whit error information and erro
 
 ### Client Id
 
-The `client_id` field is a `JSON string` param, this id is required to [Access Token](generate-token.md#generate-token). This id is send to register user email.
+The `client_id` field is a `JSON string` param, this id is required to [Access Token](generate-token.md#generate-token).
 
