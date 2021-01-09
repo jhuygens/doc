@@ -73,11 +73,9 @@ curl --location --request POST 'https://api.huygens.com/v1/token' \
         "code": "0"
     },
     "content": {
-        {
-             "access_token": "NgCXRKc...MzYjw",
-             "token_type": "bearer",
-             "expires_in": 3600
-        }
+         "access_token": "NgCXRKc...MzYjw",
+         "token_type": "bearer",
+         "expires_in": 3600
     }
 }
 ```
