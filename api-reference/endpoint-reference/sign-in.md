@@ -51,7 +51,11 @@ curl --location --request GET 'https://api.huygens.com/v1/singup' \
     "content": {
         "email": "example@huygens.com",
         "password": "HelloW0rld",
-        "app_name": "My App" 
+        "app_name": "My App",
+        "redirect_urls: [
+            "http://mysite.com/callback/",
+            ...
+        ]
     }
 }'
 ```
@@ -146,6 +150,15 @@ The response body contains a **Response** object whit error information and erro
       </td>
       <td style="text-align:left">Your app client name</td>
     </tr>
+    <tr>
+      <td style="text-align:left">redirects_urls</td>
+      <td style="text-align:left"><code>Array(String)</code>
+      </td>
+      <td style="text-align:left"><b><code>Required</code></b>
+      </td>
+      <td style="text-align:left">White-listed addresses to redirect to after authentication success OR
+        failure (e.g. <a href="http://mysite.com/callback/">http://mysite.com/callback/</a>)</td>
+    </tr>
   </tbody>
 </table>
 {% endtab %}
@@ -155,7 +168,11 @@ The response body contains a **Response** object whit error information and erro
 {
     "email": "example@huygens.com",
     "password": "HelloW0rld",
-    "app_name": "My App" 
+    "app_name": "My App",
+    "redirect_urls: [
+        "http://mysite.com/callback/",
+        ...
+    ]
 }
 ```
 {% endtab %}
