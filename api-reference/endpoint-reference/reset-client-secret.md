@@ -117,7 +117,7 @@ The response body contains a **Response** object whit error information and erro
 {
      "client_id": "1d4b0fae807b4f2d876...",
      "secret_key": "059bdc1f26314ab395...",
-     "password": "example", 
+     "password": "example"
 }
 ```
 {% endtab %}
