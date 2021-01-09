@@ -125,7 +125,7 @@ The response body contains a **Response** object whit error information and erro
 | refresh\_token | `String` | `Optional` | The refresh token returned from the authorization code exchange. |
 {% endtab %}
 
-{% tab title="JSON" %}
+{% tab title="JSON Example" %}
 ```text
 {
     "garant_type": "authorization_code",
@@ -204,7 +204,7 @@ The response body contains a **Response** object whit error information and erro
 </table>
 {% endtab %}
 
-{% tab title="JSON" %}
+{% tab title="JSON Example" %}
 ```text
 {
    "access_token": "NgCXRK...MzYjw",
