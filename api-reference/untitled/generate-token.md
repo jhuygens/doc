@@ -10,7 +10,7 @@ Access Token
 {% endapi-method-summary %}
 
 {% api-method-description %}
-The body of this POST request must contain the following parameters encoded in `application/x-www-form-urlencoded` as defined in the **OAuth 2.0** specification:
+The client can request an access token using only its client credentials.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -105,10 +105,7 @@ The response body contains a **Response** object whit error information and erro
 {% tab title="Definition" %}
 | KEY | TYPE | RULE | VALUE |
 | :--- | :--- | :--- | :--- |
-| grant\_type | `String` | **`Required`** | As defined in the OAuth 2.0 specification, this field must contain the value `"authorization_code" or "refresh_token"` |
-| code | `String` | `Optional` | The authorization code returned from the request to the Sing Up endpoint: `/v1/singup` |
-| username | `String` | `Optional` | Registered username. |
-| refresh\_token | `String` | `Optional` | The refresh token returned from the authorization code exchange. |
+| grant\_type | `String` | **`Required`** | Set it to `client_credentials` |
 {% endtab %}
 
 {% tab title="JSON Example" %}
