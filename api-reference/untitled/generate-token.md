@@ -26,8 +26,8 @@ Value: `application/x-www-form-urlencoded`
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="grant\_type" type="object" required=true %}
-Set it to `client_credentials`
+{% api-method-parameter name="--data-raw" required=true type="string" %}
+**Access Token Request** object wrapped in **Request** JSON object
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -44,8 +44,22 @@ On success, the response body contains an **Access Token Response** object.
 ```bash
 curl --location --request POST 'https://api.huygens.com/v1/token' \
 --header 'Authorization: Basic Y2x1YkJJdiQzcjpiaVA0c3N2djByZA==' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'grant_type=client_credentials'
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "info": {
+        "uuid": "23DAFA-ASDFF-A13434..",
+        "device": "web",
+        "os": "iOS",
+        "os_version": "1.0.0",
+        "timezone": "UTC-6",
+        "lang": "en",
+        "app_version": "1.0.0",
+        "app_name": "Example App"
+    },
+    "content": {
+        "garant_type": "client_credentials"
+    }
+}'
 ```
 {% endtab %}
 
