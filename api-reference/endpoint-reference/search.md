@@ -256,7 +256,7 @@ Or with a date range. For example: `q=bob%20year:1980-2020`
 | info.url | `String` | `Optional` | Artwork URL |
 {% endtab %}
 
-{% tab title="JSON" %}
+{% tab title="JSON Example" %}
 ```text
 {
     "type": "song",
