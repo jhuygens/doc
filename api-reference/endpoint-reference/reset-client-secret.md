@@ -31,7 +31,7 @@ A valid Bearer Authentication Token from the Huygens API: see the **Authorizatio
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+On success, the response body contains a **Reset Client Secret Response** object wrapped in a **Response** object in JSON.
 {% endapi-method-response-example-description %}
 
 {% tabs %}
