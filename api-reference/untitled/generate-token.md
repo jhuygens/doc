@@ -120,9 +120,6 @@ The response body contains a **Response** object whit error information and erro
 ```text
 {
     "garant_type": "authorization_code",
-    "code": "24HLJ123",
-    "username": "example",
-    "refresh_token": "NgAagA...NUm_SHo"
 }
 ```
 {% endtab %}
@@ -137,6 +134,7 @@ The response body contains a **Response** object whit error information and erro
 | access\_token | `String` | **`Required`** | An access token that can be provided in subsequent calls to API services. |
 | token\_type | `String` | **`Required`** | How the access token may be used: always “Bearer”. |
 | expires\_in | `Intege` | **`Required`** | The time period \(in seconds\) for which the access token is valid. |
+| refresh\_token | `String` | **`Required`** | A token that can be sent to the Huygens Auth service in place of an authorization code. |
 {% endtab %}
 
 {% tab title="JSON Example" %}
@@ -144,7 +142,8 @@ The response body contains a **Response** object whit error information and erro
 {
    "access_token": "NgCXRK...MzYjw",
    "token_type": "Bearer",
-   "expires_in": 3600
+   "expires_in": 3600,
+   "refresh_token": "PoO04alC_uRJoyd2ML...9fKyMaP6zl6g"
 }
 ```
 {% endtab %}
