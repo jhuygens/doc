@@ -1,8 +1,8 @@
-# Sign In
+# Authorize
 
-{% api-method method="get" host="https://api.huygens.com" path="/v1/authorize" %}
+{% api-method method="post" host="https://api.huygens.com" path="/v1/authorize" %}
 {% api-method-summary %}
-Sign In
+Authorize
 {% endapi-method-summary %}
 
 {% api-method-description %}

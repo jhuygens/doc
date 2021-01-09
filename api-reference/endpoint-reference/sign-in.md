@@ -1,8 +1,8 @@
-# Sign Up
+# Client Sign Up
 
 {% api-method method="post" host="https://api.huygens.com" path="/v1/signup" %}
 {% api-method-summary %}
-Sign Up
+Client Sign Up 
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -19,7 +19,7 @@ Value: `application/json`
 
 {% api-method-form-data-parameters %}
 {% api-method-parameter name="--data-raw" type="object" required=true %}
-**Credentials** object wrapped in **Request** object
+**Client Request** object wrapped in **Request** object
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
@@ -51,7 +51,7 @@ curl --location --request GET 'https://api.huygens.com/v1/singup' \
     "content": {
         "email": "example@huygens.com",
         "password": "HelloW0rld",
-        "username": "example" 
+        "app_name": "My App" 
     }
 }'
 ```
@@ -99,7 +99,7 @@ The response body contains a **Response** object whit error information and erro
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Credentials Object
+### Client Request Object
 
 {% tabs %}
 {% tab title="Definition" %}
@@ -139,12 +139,12 @@ The response body contains a **Response** object whit error information and erro
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">username</td>
+      <td style="text-align:left">app_name</td>
       <td style="text-align:left"><code>String</code>
       </td>
       <td style="text-align:left"><b><code>Required</code></b>
       </td>
-      <td style="text-align:left">A valid username</td>
+      <td style="text-align:left">Your app client name</td>
     </tr>
   </tbody>
 </table>
@@ -155,7 +155,7 @@ The response body contains a **Response** object whit error information and erro
 {
     "email": "example@huygens.com",
     "password": "HelloW0rld",
-    "username": "example" 
+    "app_name": "My App" 
 }
 ```
 {% endtab %}
