@@ -99,30 +99,6 @@ The response body contains a **Response** object whit error information and erro
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Access Token Response Object
-
-{% tabs %}
-{% tab title="Definition" %}
-| KEY | TYPE | RULE | VALUE |
-| :--- | :--- | :--- | :--- |
-| access\_token | `String` | **`Required`** | An access token that can be provided in subsequent calls to API services. |
-| token\_type | `String` | **`Required`** | How the access token may be used: always “Bearer”. |
-| expires\_in | `Integer` | **`Required`** | The time period \(in seconds\) for which the access token is valid. |
-{% endtab %}
-
-{% tab title="JSON Example" %}
-```text
-{
-   "access_token": "NgCXRK...MzYjw",
-   "token_type": "Bearer",
-   "expires_in": 3600
-}
-```
-{% endtab %}
-{% endtabs %}
-
-For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) specifications.
-
 ### Access Token Request Object
 
 {% tabs %}
@@ -147,7 +123,27 @@ For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) speci
 {% endtab %}
 {% endtabs %}
 
+### Access Token Response Object
 
+{% tabs %}
+{% tab title="Definition" %}
+| KEY | TYPE | RULE | VALUE |
+| :--- | :--- | :--- | :--- |
+| access\_token | `String` | **`Required`** | An access token that can be provided in subsequent calls to API services. |
+| token\_type | `String` | **`Required`** | How the access token may be used: always “Bearer”. |
+| expires\_in | `Intege` | **`Required`** | The time period \(in seconds\) for which the access token is valid. |
+{% endtab %}
 
+{% tab title="JSON Example" %}
+```text
+{
+   "access_token": "NgCXRK...MzYjw",
+   "token_type": "Bearer",
+   "expires_in": 3600
+}
+```
+{% endtab %}
+{% endtabs %}
 
+For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) specifications.
 
