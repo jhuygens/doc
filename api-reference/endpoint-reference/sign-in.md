@@ -170,7 +170,7 @@ The response body contains a **Response** object whit error information and erro
     "email": "example@huygens.com",
     "password": "HelloW0rld",
     "app_name": "My App",
-    "redirect_urls: [
+    "redirect_urls": [
         "http://mysite.com/callback/",
         ...
     ]
