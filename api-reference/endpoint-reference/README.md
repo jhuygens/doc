@@ -194,7 +194,7 @@ The offset-based paging object is a container for a set of objects. It contains 
 {% tab title="JSON" %}
 ```http
 {
-    "href: "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=10&limit=10",
+    "href": "https://api.huygens.com/v1/search?query=Muse&type=track&market=US&offset=10&limit=10",
     "items": [
         ...
         ],
