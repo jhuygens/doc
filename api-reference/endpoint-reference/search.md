@@ -218,7 +218,7 @@ For example: `q=roadhouse%20NOT%20blues` returns items that match “roadhouse�
 
 _Note_: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched.
 
-**Field filters**: By default, results are returned when a match is found in _any_ field of the target object type. Searches can be made more specific by specifying a `name, artist, album, genre, year and` [`country`](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) field filter.  Separate fields by  `,`
+**Field filters**: By default, results are returned when a match is found in _any_ field of the target object type. Searches can be made more specific by specifying a `name, artist, album, genre, year and` [`country`](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) field filter.  Separate field filters by  `,`
 
 For example: The query `q=album:gold,artist:abba&type=album` returns only albums with the text “gold” in the album name and the text “abba” in the artist name. 
 
