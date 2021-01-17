@@ -149,5 +149,5 @@ The response body contains a **Response** object whit error information and erro
 {% endtab %}
 {% endtabs %}
 
-For more information view [OAuth 2.0](https://tools.ietf.org/html/rfc6749) specifications.
+For further information about this, see [OAuth 2.0](https://tools.ietf.org/html/rfc6749) specifications.
 
