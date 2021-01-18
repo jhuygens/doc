@@ -16,6 +16,10 @@ See this [guide](https://www.digitalocean.com/community/tutorials/how-to-install
 
 ### Linux and macOS
 
+{% hint style="warning" %}
+You need an internet connection without interruptions during the installation process.
+{% endhint %}
+
 ### 1. Clone the deploy resources repository:
 
 ```
