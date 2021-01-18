@@ -19,7 +19,7 @@ This project was developed in the GO language, implementing the following techno
 
 ## Code
 
-You can check and clone the repositories used in this api [here](https://github.com/jhuygens).
+You can check and clone the repositories used in this project [here](https://github.com/jhuygens).
 
 {% embed url="https://github.com/jhuygens" %}
 
