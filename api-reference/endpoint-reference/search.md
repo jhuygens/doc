@@ -212,12 +212,6 @@ The response body contains a **Response** object whit error information and erro
 
 **Keyword matching**: Matching of search keywords is _not_ case-sensitive. Operators, however, should be specified in uppercase. Unless surrounded by double quotation marks, keywords are matched in any order. For example: `q=roadhouse&20blues` matches both “Blues Roadhouse” and “Roadhouse of the Blues”. `q="roadhouse&20blues"` matches “My Roadhouse Blues” but not “Roadhouse of the Blues”.
 
-**Operator**: The operator **`NOT`** can be used to exclude results. 
-
-For example: `q=roadhouse%20NOT%20blues` returns items that match “roadhouse” but excludes those that also contain the keyword “blues”. 
-
-_Note_: Operators must be specified in uppercase. Otherwise, they are handled as normal keywords to be matched.
-
 **Field filters**: By default, results are returned when a match is found in _any_ field of the target object type. Searches can be made more specific by specifying a `name, artist, album, genre, year and` [`country`](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) field filter.  Separate field filters by  `,`
 
 For example: The query `q=album:gold,artist:abba&type=album` returns only albums with the text “gold” in the album name and the text “abba” in the artist name. 
