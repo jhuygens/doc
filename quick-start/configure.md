@@ -1,12 +1,35 @@
-# Configure
-
-## API configuration
+# API configuration
 
 The default configuration file of Huygens Search Api is: `./config.json`
 
 {% hint style="info" %}
 The default configuration is sufficient for the basic operation of the API.
 {% endhint %}
+
+## .env configuration
+
+ Change the Docker containers configuration:
+
+{% code title=".env" %}
+```css
+// Expose api on this port
+API_PUBLIC_PORT=8080
+
+// Load config.json file to all modules
+API_CONFIG=./config.json
+
+// Load nginx configuation 
+NGINX_CONF=./nginx.conf
+
+// Load ssl security certs directory
+CERTS_DIR=./certs 
+
+// Expose mongodb exppress
+MONGODB_EXPRESS_PUBLIC_PORT=8081 # Uncomment in mongodb express container in docker compse to activate
+```
+{% endcode %}
+
+## config.json configuration
 
 ### General configurations
 
