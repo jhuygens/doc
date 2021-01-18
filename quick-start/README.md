@@ -16,7 +16,7 @@ See this [guide](https://www.digitalocean.com/community/tutorials/how-to-install
 
 ### Linux and macOS
 
-1. Download the installation resources:
+### 1. Download the installation resources:
 
 ```
 $ curl -sLf https://github.com/jhuygens/deploy
@@ -26,7 +26,7 @@ $ curl -sLf https://github.com/jhuygens/deploy
  or clone this repository: [`https://github.com/jhuygens/deploy`](https://github.com/jhuygens/deploy)\`\`
 {% endhint %}
 
-2. In deploy directory run the follows commands:
+### 2. In deploy directory run the follows commands:
 
 ```bash
 # This command will download the necessary docker images 
@@ -53,7 +53,7 @@ Successfully tagged deploy_search-service:latest
 $
 ```
 
-Then run the following command to bring the Huygens Search API online:
+### 3. Then run the following command to bring the Huygens Search API online:
 
 ```bash
 # The -d flag makes the Docker daemon execute the containers in background
@@ -72,16 +72,36 @@ $
 ```
 
 {% hint style="success" %}
-Test the Huygens Search API following the instructions in this [document](api-reference/endpoint-reference/) to confirm that it works correctly.
+Test the Huygens Search API following the instructions in this [document](../api-reference/endpoint-reference/) to confirm that it works correctly.
 {% endhint %}
 
-4. View the log write by the API modules with the following command:
+### 4. View the log write by the API modules with the following command:
 
 ```bash
-$ docker-compose logs
+$ sudo docker-compose logs
 ```
 
 {% hint style="info" %}
 For further information about how view logs in Docker, see this [document](https://docs.docker.com/config/containers/logging/). 
 {% endhint %}
+
+If you want to stop the API execution, run the following command:
+
+```bash
+# Stops containers and removes containers, networks, volumes, 
+# and images created by up
+$ sudo docker-compose down
+```
+
+Output:
+
+```bash
+Removing deploy_gateway_1        ... done
+Removing deploy_redis_1          ... done
+Removing deploy_auth-service_1   ... done
+Removing deploy_search-service_1 ... done
+Removing deploy_mongo_1          ... done
+Removing network deploy_default
+$
+```
 

@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Quick start guide](quick-start.md)
+* [Quick start guide](quick-start/README.md)
+  * [Configure](quick-start/configure.md)
 
 ## API REFERENCE
 
