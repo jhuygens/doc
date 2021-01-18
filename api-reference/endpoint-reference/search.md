@@ -33,7 +33,7 @@ For example: `q=name:Pinck%20Floyd`
 
 {% api-method-parameter name="type" type="string" required=true %}
 A comma-separated list of item types to search across.  
-Valid types are: `album , artist, playlist, track, show, movie, podcast, people and episode`  
+Valid types are: `album , artist, author, playlist, track, show, movie, podcast, people and episode`  
 Search results include hits from all the specified item types.  
 For example: `q=name:nirvana&type=album,track` returns both albums and tracks with **`nirvana`** included in their name.
 {% endapi-method-parameter %}
