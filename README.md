@@ -25,9 +25,9 @@ You can check and clone the repositories used in this api [here](https://github.
 
 ### Installation
 
-To install the Huygens Search API, see this [guide](quick-start/).
+To install the Huygens Search API, see this [installation guide.](quick-start/)
 
 ### API Reference
 
-
+See the API Reference [here](api-reference/endpoint-reference/).
 
