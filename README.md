@@ -31,3 +31,11 @@ To install the Huygens Search API, see this [installation guide.](quick-start/)
 
 See the API Reference [here](api-reference/endpoint-reference/).
 
+## Contact
+
+{% embed url="https://github.com/josuegiron" %}
+
+{% embed url="https://www.linkedin.com/in/josuegiron93/" %}
+
+
+
