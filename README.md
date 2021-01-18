@@ -94,4 +94,4 @@ Removing network deploy_default
 $
 ```
 
-For further information about this flow, see: https://app.gitbook.com/@josuegiron/s/huygens
+For further information about this, see: https://app.gitbook.com/@josuegiron/s/huygens
