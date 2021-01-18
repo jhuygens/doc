@@ -35,6 +35,53 @@ $ sudo docker-compose build
 ```
 
 {% hint style="warning" %}
-It will ask for the MIJU user credentials. This may take several minutes.
+It will ask for the super user credentials. This may take several minutes.
+{% endhint %}
+
+Upon completion you will see something like this:
+
+```bash
+...
+
+ ---> Using cache
+ ---> ea6fbd50f6c2
+Step 12/12 : CMD ["./main"]
+ ---> Using cache
+ ---> 8d1f437ec89f
+Successfully built 8d1f437ec89f
+Successfully tagged deploy_search-service:latest
+$
+```
+
+Then run the following command to bring the Huygens Search API online:
+
+```bash
+# The -d flag makes the Docker daemon execute the containers in background
+$ sudo docker-compose up -d
+```
+
+If everything works out, you will see:
+
+```bash
+Starting deploy_mongo_1          ... done
+Creating deploy_search-service_1 ... done
+Creating deploy_auth-service_1   ... done
+Creating deploy_gateway_1        ... done
+Creating deploy_redis_1          ... done
+$
+```
+
+{% hint style="success" %}
+Test the Huygens Search API following the instructions in this [document](api-reference/endpoint-reference/) to confirm that it works correctly.
+{% endhint %}
+
+4. View the log write by the API modules with the following command:
+
+```bash
+$ docker-compose logs
+```
+
+{% hint style="info" %}
+For further information about how view logs in Docker, see this [document](https://docs.docker.com/config/containers/logging/). 
 {% endhint %}
 
