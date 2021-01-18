@@ -6,7 +6,7 @@ description: The Huygens search API
 
 ## Specs
 
-This project was developed in the GO language, implementing the following technologies: Docker containers, Docker Compose, memory in cache with Redis, database using MongoDB. The REST architecture and authentication methods defined in OAuth2.0 were also implemented.
+This project was developed in the GO language, implementing the following technologies: `Docker containers`, `Docker Compose`, memory in cache with `Redis`, database using `MongoDB`. The `REST` architecture and authentication methods defined in `OAuth2.0` were also implemented.
 
 | Technology | Value |
 | :--- | :--- |
