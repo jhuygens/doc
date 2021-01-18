@@ -67,6 +67,84 @@ Change encryption keys and cache timeouts
 ### Configure a new searcher
 
 {% hint style="warning" %}
-Implement this package and registry in main.go from search-service repository. [Compile](https://docs.docker.com/engine/reference/commandline/build/) a new image of this module.
+Implement the [searcher-engine](https://github.com/jhuygens/searcher-engine) package and import in `main.go` file from [search-service](https://github.com/jhuygens/search-service) repository. [Compile](https://docs.docker.com/engine/reference/commandline/build/) a new image of this module.
 {% endhint %}
+
+{% code title="search-service/main.go" %}
+```go
+package main 
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"net/http"
+
+	"github.com/gorilla/mux"
+	"github.com/jgolang/api"
+	"github.com/jgolang/config"
+	"github.com/jgolang/log"
+	"github.com/jgolang/redis"
+	"github.com/jhuygens/cache"
+	"github.com/jhuygens/security"
+
+	// search-engine autoregistry searchers
+	_ "github.com/jhuygens/crcind-searcher"
+	_ "github.com/jhuygens/itunes-searcher"
+	_ "github.com/jhuygens/tvmaze-searcher"
+	// Your searcher-engine package implementation
+	_ "github.com/firulais/my-implement-searcher"
+)
+
+...
+```
+{% endcode %}
+
+Add your implement configuration to config.json file:
+
+{% code title="config.json" %}
+```go
+// Add the searcher custom name
+...
+    "searchers": {
+        "itunes": "itunes",
+        "tvmaze": "tvmaze",
+        "crcind": "crcind"
+        "firulais": "myfiru"
+    },
+...
+// Add the integration service provider
+    "integrations": {
+        "firulais": {
+            "endpoint": "https://api.firulais.com/search",
+            "timeout": 20
+        },
+        "itunes": {
+            "endpoint": "https://itunes.apple.com/search",
+            "timeout": 20
+        },
+        "tvmaze": {
+            "endpoint": "http://api.tvmaze.com/search/shows",
+            "timeout": 20
+        },
+        "crcind": {
+            "endpoint": "http://www.crcind.com/csp/samples/SOAP.Demo.CLS",
+            "action": "GetByNameResponse",
+            "timeout": 20
+        },
+        "logger": {
+            "events": {
+                "endpoint": "http://localhost:9021/logger/events",
+                "timeout": 20
+            },
+            "logs": {
+                "endpoint": "http://localhost:9021/logger/logs",
+                "timeout": 20
+            }
+        }
+    }
+...
+```
+{% endcode %}
 
