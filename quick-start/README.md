@@ -8,7 +8,7 @@ description: >-
 
 ## Install
 
-At a minimum, Huygens Search API requires curl, [Docker Engine 19.03.2 ](https://docs.docker.com/engine/)\(or latest\) versión and [Docker Compose 3.1](https://docs.docker.com/compose/install/) \(or latest\) to be installed. This tools are needed for run the Huygens Search API .
+At a minimum, Huygens Search API requires `git`, [Docker Engine 19.03.2 ](https://docs.docker.com/engine/)\(or latest\) versión and [Docker Compose 3.1](https://docs.docker.com/compose/install/) \(or latest\) to be installed. This tools are needed for run the Huygens Search API .
 
 {% hint style="info" %}
 See this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04) for how install Docker Engine and Docker Compose in your computer or see the official Docker [documentation](https://docs.docker.com/get-docker/).
@@ -16,14 +16,14 @@ See this [guide](https://www.digitalocean.com/community/tutorials/how-to-install
 
 ### Linux and macOS
 
-### 1. Download the installation resources:
+### 1. Clone the deploy resources repository:
 
 ```
-$ curl -sLf https://github.com/jhuygens/deploy
+$ git clone https://github.com/jhuygens/deploy
 ```
 
 {% hint style="success" %}
- or clone this repository: [`https://github.com/jhuygens/deploy`](https://github.com/jhuygens/deploy)\`\`
+ or download this files: [`https://github.com/jhuygens/deploy`](https://github.com/jhuygens/deploy)\`\`
 {% endhint %}
 
 ### 2. In deploy directory run the follows commands:
