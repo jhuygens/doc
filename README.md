@@ -1,25 +1,33 @@
+---
+description: The Huygens search API
+---
+
 # Overview
 
-## Getting Super Powers
+### Specs
 
-Becoming a super hero is a fairly straight forward process:
+This project was developed in the GO language, implementing the following technologies: Docker containers, Docker Compose, memory in cache with Redis, database using MongoDB. The REST architecture and authentication methods defined in OAuth2.0 were also implemented.
 
-```
-$ give me super-powers
-```
+| Technology | Value |
+| :--- | :--- |
+| Go | 1.15  |
+| Docker Engine | 19.03.02 |
+| Docker Compose | 3.1 |
+| NGINX | Latest |
+| MongoDB | Latest |
+| Alpine OS Container | Latest |
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+### Code
 
-Once you're strong enough, save the world:
+You can check and clone the repositories used in this api [here](https://github.com/jhuygens).
 
-{% code title="hello.sh" %}
-```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-{% endcode %}
+{% embed url="https://github.com/jhuygens" %}
+
+### Installation
+
+To install the Huygens Search API, see this [guide](quick-start/).
+
+### API Reference
 
 
 
