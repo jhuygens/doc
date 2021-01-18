@@ -74,7 +74,7 @@ $
 {% hint style="success" %}
 Test the Huygens Search API following the instructions in this [document](../api-reference/endpoint-reference/) to confirm that it works correctly.
 
-Load the Postman collection in`API.postman_collection.json` file on [Postman](https://www.postman.com/) to easy request services to API.
+Load the Postman collection from`API.postman_collection.json` file on [Postman](https://www.postman.com/) to easy request services to API.
 {% endhint %}
 
 ### 4. View the log write by the API modules with the following command:
